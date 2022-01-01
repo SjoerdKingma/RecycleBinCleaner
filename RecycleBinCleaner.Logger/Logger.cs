@@ -45,7 +45,7 @@ namespace RecycleBinCleaner.Logger
             newLog.Id = Guid.NewGuid().ToString();
             newLog.Date = DateTime.Now.ToString();
             newLog.Code = "1";
-            newLog.Message = "Scheduled Task";
+            newLog.Message = "Clean Bin Result";
             newLog.ApplicationResult = new ApplicationResult()
             {
                 FilesSuccesfullyRemoved = new List<FilesSuccesfullyRemoved>(),
