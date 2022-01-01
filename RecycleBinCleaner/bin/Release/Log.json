@@ -1,0 +1,27 @@
+{
+  "Logs": [
+    {
+      "Id": "00543462-7866-4ac8-8ebf-c16ee1d59858",
+      "Date": "12/31/2021 3:46:51 PM",
+      "Code": "1",
+      "Message": "Scheduled Task",
+      "Application Result": {
+        "Files succesfully removed": [
+          {
+            "Filename": "images.txt",
+            "Deleted Date": "vandaag",
+            "Path":  "hier"
+          }
+        ],
+        "Files failed to remove": [
+          {
+            "Filename": "images.txt",
+            "Deleted Date": "vandaag",
+            "Path": "Hier",
+            "Error message":  "No permissions"
+          }
+        ]
+      }
+    }
+  ]
+}

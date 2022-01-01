@@ -1,0 +1,6 @@
+C:\Projects\RecycleBinCleaner\RecycleBinCleaner.Shared\bin\Debug\RecycleBinCleaner.Shared.dll
+C:\Projects\RecycleBinCleaner\RecycleBinCleaner.Shared\bin\Debug\RecycleBinCleaner.Shared.pdb
+C:\Projects\RecycleBinCleaner\RecycleBinCleaner.Shared\obj\Debug\RecycleBinCleaner.Shared.csproj.AssemblyReference.cache
+C:\Projects\RecycleBinCleaner\RecycleBinCleaner.Shared\obj\Debug\RecycleBinCleaner.Shared.csproj.CoreCompileInputs.cache
+C:\Projects\RecycleBinCleaner\RecycleBinCleaner.Shared\obj\Debug\RecycleBinCleaner.Shared.dll
+C:\Projects\RecycleBinCleaner\RecycleBinCleaner.Shared\obj\Debug\RecycleBinCleaner.Shared.pdb

@@ -1,0 +1,12 @@
+{
+  "UserSettings": {
+    "FilesToDelete": [
+      "images",
+      "saves",
+      "notes"
+    ],
+    "CaseSensitiveFilenames": "False",
+    "IncludesFileExtension": "False",
+    "LogDeletedFilenames": "True"
+  }
+}
