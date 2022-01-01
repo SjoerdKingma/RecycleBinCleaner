@@ -6,6 +6,7 @@
 # Custom ignore
 Dummy*Files/
 Dummy*Files2/
+.vs/
 
 # User-specific files
 *.rsuser
