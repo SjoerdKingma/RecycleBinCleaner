@@ -5,14 +5,14 @@ A small tool to remove certain files from Windows recycle bin, based on your inp
 
 ### 1. Download the zip file and extract the contents to a new folder.
 ### 2. Set your user settings.
-1. Inside your new folder, navigate to the folder `UserSettings` and open the file inside called `UserSettings.json`.
+1. Inside your new folder, navigate to the `UserSettings` folder and open  `UserSettings.json`.
 2. Replace the sample file names with the filenames you wish to be deleted from the Recycle bin. 
     >Important: File names must be in double-quotes and seperated by a comma.
 3. Save your changes to the document.
 
 ### 3. Run `RecycleBinCleaner.exe`.
 
-### 4. Open `Logs.json` to view the results.
+### 4. Open `Logs.json` to view the results. 
 ---
 ## 
 ## (Optional) Automating this process
