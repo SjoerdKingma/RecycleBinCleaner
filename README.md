@@ -1,6 +1,15 @@
 # RecycelBinCleaner
 A small tool to remove certain files from Windows recycle bin, based on your input.
 
+## How it works
+You can enter a list of filenames in `UserSettings.json` and run `RecycleBinCleaner.exe` to delete all filles with matching filenames from the recycle bin.
+
+For the list of filenames you enter, there are these options:
+
+1. Case sensitive input `True`/ `False`.
+2. Include file extension in input `True` / `False`.
+3. Log deleted files `True` / `False`.
+
 ## How to use:
 
 ### 1. Download the zip file and extract the contents to a new folder.
