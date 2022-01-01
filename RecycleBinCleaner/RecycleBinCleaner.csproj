@@ -49,15 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExceptionHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecycleBinHelper.cs" />
-    <Compile Include="UserSettings.cs" />
+    <Compile Include="UserSettings\UserSettingsHelper.cs" />
+    <Compile Include="UserSettings\UserSettingsRoot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <Content Include="UserSettings.json">
+    <Content Include="UserSettings\UserSettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -12,16 +12,10 @@ namespace RecycleBinCleaner
     public class RecycleBinHelper
     {
         [STAThread]
-        public static CleanBinResult CleanBin(List<string> filesToDelete, bool includesFileExtension, bool caseSensitive)
+        public static CleanBinResult CleanBin(List<string> input, bool includesFileExtension, bool caseSensitive)
         {
-            //Initialize user input
-            List<string> input = filesToDelete;
-
-            if (!caseSensitive)
-            {
-                //Convert all filesToDelete to lowercase
-                input = filesToDelete.ConvertAll(x => x.ToLower());
-            }
+            //Initialize user filesToDelete
+            List<string> filesToDelete = modifyUserInput(input, caseSensitive);
 
             // Initialize this method return value
             CleanBinResult result = new CleanBinResult()
@@ -51,11 +45,11 @@ namespace RecycleBinCleaner
                     string originalFilePath = recycler.GetDetailsOf(fi, 1);
                     string originalFileDeletedDate = recycler.GetDetailsOf(fi, 2);
 
-                    foreach (string item in input)
+                    foreach (string item in filesToDelete)
                     {
                         string fileNameInput = "";
 
-                        //Check if the user added file extensions to the filesToDelete
+                        //Check if the user added file extensions to the input
                         if (includesFileExtension)
                         {
                             fileNameInput = item;
@@ -104,6 +98,18 @@ namespace RecycleBinCleaner
                         Errormessage = exc.ToString()
                     });
                 }
+            }
+
+            return result;
+        }
+
+        private static List<string> modifyUserInput(List<string> input, bool caseSensitive)
+        {
+            List<string> result = input;
+            if (!caseSensitive)
+            {
+                //Convert all to lowercase
+                result = result.ConvertAll(x => x.ToLower());
             }
 
             return result;
