@@ -33,10 +33,9 @@ namespace RecycleBinCleaner
             }
 
             //Get user settings
-
             UserSettings userSettings = GetUserSettings();
 
-            //Convert properties in user settings
+            //Convert properties in UserSettings.json
             List<string> filesToDelete = userSettings.FilesToDelete;
             bool includeFileExtension = bool.Parse(userSettings.IncludesFileExtension);
             bool logDeletedFilenames = bool.Parse(userSettings.LogDeletedFilenames);
