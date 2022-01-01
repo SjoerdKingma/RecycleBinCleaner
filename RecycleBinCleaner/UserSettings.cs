@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RecycleBinCleaner
 {
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<UserSettingsRoot>(myJsonResponse); 
     public class UserSettings
     {
         public List<string> FilesToDelete { get; set; }
@@ -19,6 +19,4 @@ namespace RecycleBinCleaner
     {
         public UserSettings UserSettings { get; set; }
     }
-
-
 }

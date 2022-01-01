@@ -51,7 +51,6 @@ namespace RecycleBinCleaner
                 if (logDeletedFilenames)
                 {
                     logger.CreateLog(result);
-                    logger.CreateLog(result);
                 }
             }
             catch (Exception ex)
@@ -62,7 +61,6 @@ namespace RecycleBinCleaner
             {
                 logger.UpdateLogFile();
             }
-
         }
 
         private static UserSettings GetUserSettings()
