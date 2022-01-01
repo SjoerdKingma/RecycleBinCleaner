@@ -22,9 +22,8 @@ namespace RecycleBinCleaner.Logger
             StreamReader r = new StreamReader(FilePath);
             string jsonString = r.ReadToEnd();
             r.Close();
-            Root jsonRoot = JsonConvert.DeserializeObject<Root>(jsonString);
+            JsonRoot jsonRoot = JsonConvert.DeserializeObject<JsonRoot>(jsonString);
             Logs = jsonRoot.Logs;
-            var sdf = 0;
         }
 
         public void CreateLog(string message, int logCode)
@@ -41,7 +40,7 @@ namespace RecycleBinCleaner.Logger
 
         public void CreateLog(CleanBinResult cleanBinResult)
         {
-            //Create new log
+            //Initialize new log
             Log newLog = new Log();
             newLog.Id = Guid.NewGuid().ToString();
             newLog.Date = DateTime.Now.ToString();
@@ -53,6 +52,7 @@ namespace RecycleBinCleaner.Logger
                 FilesFailedToRemove = new List<FilesFailedToRemove>()
             };
 
+            //Add succesful files to new log
             foreach(var succesfulItem in cleanBinResult.FilesSuccessfullyRemoved)
             {
                 newLog.ApplicationResult.FilesSuccesfullyRemoved.Add(new FilesSuccesfullyRemoved()
@@ -63,7 +63,8 @@ namespace RecycleBinCleaner.Logger
                 });
             }
 
-            foreach(var failedItem in cleanBinResult.FilesFailedToRemove)
+            //Add failed files to new log
+            foreach (var failedItem in cleanBinResult.FilesFailedToRemove)
             {
                 newLog.ApplicationResult.FilesFailedToRemove.Add(new FilesFailedToRemove() 
                 {
@@ -73,64 +74,13 @@ namespace RecycleBinCleaner.Logger
                 });
             }
 
-            Logs.Add(newLog);
+            Logs.Add(newLog); //Add the log
         }
 
         public void UpdateLogFile()
         {
-            string jsonString = JsonConvert.SerializeObject(new Root() {Logs = Logs });
+            string jsonString = JsonConvert.SerializeObject(new JsonRoot() {Logs = Logs });
             File.WriteAllText(FilePath, jsonString, Encoding.Default);
         }
-    }
-
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
-    public class FilesSuccesfullyRemoved
-    {
-        public string Filename { get; set; }
-
-        [JsonProperty("Deleted Date")]
-        public string DeletedDate { get; set; }
-
-        [JsonProperty("Original Path")]
-        public string OriginalPath { get; set; }
-    }
-
-    public class FilesFailedToRemove
-    {
-        public string Filename { get; set; }
-
-        [JsonProperty("Deleted Date")]
-        public string DeletedDate { get; set; }
-
-        [JsonProperty("Original Path")]
-        public string OriginalPath { get; set; }
-
-        [JsonProperty("Error message")]
-        public string ErrorMessage { get; set; }
-    }
-
-    public class ApplicationResult
-    {
-        [JsonProperty("Files succesfully removed")]
-        public List<FilesSuccesfullyRemoved> FilesSuccesfullyRemoved { get; set; }
-
-        [JsonProperty("Files failed to remove")]
-        public List<FilesFailedToRemove> FilesFailedToRemove { get; set; }
-    }
-
-    public class Log
-    {
-        public string Id { get; set; }
-        public string Date { get; set; }
-        public string Code { get; set; }
-        public string Message { get; set; }
-
-        [JsonProperty("Application Result")]
-        public ApplicationResult ApplicationResult { get; set; }
-    }
-
-    public class Root
-    {
-        public List<Log> Logs { get; set; }
     }
 }
