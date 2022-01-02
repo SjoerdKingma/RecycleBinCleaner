@@ -1,4 +1,4 @@
-# RecycelBinCleaner
+# RecycleBinCleaner
 A small tool to remove certain files from Windows recycle bin, based on your input.
 
 ## How it works
