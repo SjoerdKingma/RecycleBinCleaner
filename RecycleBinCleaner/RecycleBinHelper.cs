@@ -100,7 +100,7 @@ namespace RecycleBinCleaner
                     {
                         Filename = originalFileName,
                         OriginalFilePath = originalFilePath,
-                        OriginalFileDeletedDate = original
+                        OriginalFileDeletedDate = originalFileDeletedDate,
                         Errormessage = exc.ToString()
                     });
                 }
