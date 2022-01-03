@@ -36,14 +36,18 @@ namespace RecycleBinCleaner
 
             for (int i = 0; i < binItemCount; i++)
             {
+                //Initialize properties for the CleanBinResultItem
                 string originalFileName = "";
+                string originalFilePath = "";
+                string originalFileDeletedDate = "";
+
                 try
                 {
                     FolderItem fi = items.Item(i);
                     originalFileName = recycler.GetDetailsOf(fi, 0);
                     string fileName = originalFileName;
-                    string originalFilePath = recycler.GetDetailsOf(fi, 1);
-                    string originalFileDeletedDate = recycler.GetDetailsOf(fi, 2);
+                    originalFilePath = recycler.GetDetailsOf(fi, 1);
+                    originalFileDeletedDate = recycler.GetDetailsOf(fi, 2);
 
                     foreach (string item in filesToDelete)
                     {
@@ -95,6 +99,8 @@ namespace RecycleBinCleaner
                     result.FilesFailedToRemove.Add(new BinResultItemFailed()
                     {
                         Filename = originalFileName,
+                        OriginalFilePath = originalFilePath,
+                        OriginalFileDeletedDate = original
                         Errormessage = exc.ToString()
                     });
                 }
