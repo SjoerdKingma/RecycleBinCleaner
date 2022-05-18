@@ -55,9 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RecycleBinCleaner.Shared\RecycleBinCleaner.Shared.csproj">
+    <ProjectReference Include="..\RecycleBinCleaner.Shared\RecycleBinCleanerLibrary.csproj">
       <Project>{4bcd4894-e85c-4608-a2c9-72c70b4618c3}</Project>
-      <Name>RecycleBinCleaner.Shared</Name>
+      <Name>RecycleBinCleanerLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

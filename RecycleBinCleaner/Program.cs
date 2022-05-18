@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using RecycleBinCleaner;
 using Newtonsoft.Json;
 using RecycleBinCleaner.Logger;
-using RecycleBinCleaner.Shared;
+using RecycleBinCleanerLibrary;
 using RecycleBinCleaner.UserSettings;
 
 namespace RecycleBinCleaner

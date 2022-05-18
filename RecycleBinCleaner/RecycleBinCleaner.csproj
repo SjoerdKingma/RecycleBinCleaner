@@ -52,7 +52,6 @@
     <Compile Include="ExceptionHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecycleBinHelper.cs" />
     <Compile Include="UserSettings\UserSettingsHelper.cs" />
     <Compile Include="UserSettings\UserSettingsRoot.cs" />
   </ItemGroup>
@@ -79,9 +78,9 @@
       <Project>{895b768a-4817-4bd0-a834-b485308ede84}</Project>
       <Name>RecycleBinCleaner.Logger</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RecycleBinCleaner.Shared\RecycleBinCleaner.Shared.csproj">
+    <ProjectReference Include="..\RecycleBinCleaner.Shared\RecycleBinCleanerLibrary.csproj">
       <Project>{4bcd4894-e85c-4608-a2c9-72c70b4618c3}</Project>
-      <Name>RecycleBinCleaner.Shared</Name>
+      <Name>RecycleBinCleanerLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

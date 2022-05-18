@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecycleBinCleaner", "Recycl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecycleBinCleaner.Logger", "RecycleBinCleaner.Logger\RecycleBinCleaner.Logger.csproj", "{895B768A-4817-4BD0-A834-B485308EDE84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecycleBinCleaner.Shared", "RecycleBinCleaner.Shared\RecycleBinCleaner.Shared.csproj", "{4BCD4894-E85C-4608-A2C9-72C70B4618C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecycleBinCleanerLibrary", "RecycleBinCleaner.Shared\RecycleBinCleanerLibrary.csproj", "{4BCD4894-E85C-4608-A2C9-72C70B4618C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

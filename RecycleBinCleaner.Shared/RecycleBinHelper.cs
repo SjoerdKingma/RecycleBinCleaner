@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Shell32;
-using RecycleBinCleaner.Shared;
 
-namespace RecycleBinCleaner
+namespace RecycleBinCleanerLibrary
 {
     public class RecycleBinHelper
     {
